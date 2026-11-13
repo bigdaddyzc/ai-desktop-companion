@@ -1,4 +1,16 @@
-# 芯伴 · 有伙伴感的桌面编程助手
+# Xinban · AI Coding Companion for Windows
+
+A small desktop companion for developers who work with coding agents: bring delegated tasks, progress, permission prompts, and results into one place without replacing your editor.
+
+**Desktop-first, no hardware required.** The current focus is the Windows companion; the ESP32 firmware and hardware experiments remain in the repository but are not required to try it. Long-term memory is stored locally and can be inspected, deleted, or disabled; relevant context is sent to the configured cloud service when you ask a question. This is not an offline-only assistant.
+
+[Quick Start](#quick-start) · [Capability Status](docs/capabilities.md) · [Current Direction](docs/optimization-plan-v5.md) · [Architecture Decision](docs/ADR-002-desktop-first.md) · [中文](#中文说明)
+
+**Before you start:** Windows 11, Node.js 24 LTS, and npm. The companion opens first; use its panel button or the system tray to configure it. AI chat requires your own DeepSeek API key and incurs provider charges. See the capability status for what has been tested and what remains experimental.
+
+## 中文说明
+
+### 芯伴 · 有伙伴感的桌面编程助手
 
 芯伴面向经常让编程 Agent 在后台干活的个人开发者：把交代任务、观察进度、处理需要你决定的事和查看结果放在一个桌面入口里，减少在项目与工具窗口之间来回切换。小机器人负责短提示和伙伴感，工作台承载完整任务、权限与结果；它不替代编辑器，也不把 Agent 的一句“完成”当成需求已经验收。
 
@@ -14,12 +26,15 @@
 2. **它是伙伴，不是客服** —— 用「你」不用「您」，不写「作为一个 AI」，不铺开场白和总结段，不列 1234 除非真是步骤。
 3. **它得记事** —— 记忆存在本机，可看、可删、可关；每次请求只带相关的那几条。
 
+<a id="quick-start"></a>
+
 ## 快速开始
 
 需要 Windows 11、Node.js 24 LTS、npm，以及首次下载 Electron 依赖时的网络。
 
 ```powershell
-cd D:\deepseek-workspace\ai-desktop-companion
+git clone https://github.com/bigdaddyzc/ai-desktop-companion.git
+cd ai-desktop-companion
 npm ci
 npm run dev
 ```
