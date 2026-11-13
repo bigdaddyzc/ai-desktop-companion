@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+test-results
+playwright-report
+package-lock.json
+docs/PRD-v1.0.md
+.workbuddy
+
+.tools
+**/.pio

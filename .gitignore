@@ -1,0 +1,25 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+scripts/eval/results/
+
+.tools/
+**/.pio/
+
+# Local Python model tooling
+__pycache__/
+*.pyc
+release/
+
+# Local agent memories (never publish)
+.workbuddy/memory/
+.claude/memory/
+.codex/memory/
+.codebuddy/memory/
